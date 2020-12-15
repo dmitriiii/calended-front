@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import { Button } from '@material-ui/core';
+
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+
+class App extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<React.Fragment>
+				<CssBaseline />
+				<Container fixed>
+					<Typography component="h1" style={{ backgroundColor: '#cfe8fc', height: '100vh' }}>
+						fweewffew
+					</Typography>
+				</Container>
+				<div className="container-fluid">
+					<div className="row">
+						<div className="col-md-12">
+							<div className="filters">
+								<h3>Filters</h3>
+								<input type="text" />
+							</div>
+							<div className="content">
+								<h4>Content</h4>
+								<Button color="primary">Hello World</Button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</React.Fragment>
+			
+		);
+	}
 }
+
 
 export default App;
